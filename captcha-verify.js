@@ -1,9 +1,3 @@
-/**
- * MODULE: Anti-Spam Verification
- * TASK: Verify that the user is human before allowing Sign-Up.
- * TOOLS: Node.js, Axios, Cloudflare Turnstile
- */
-
 const axios = require('axios');
 
 // The secret key provided by the captcha service
@@ -36,5 +30,6 @@ async function verifyUser(token, ipAddress) {
         return false;
     }
 }
+
 
 module.exports = { verifyUser };
